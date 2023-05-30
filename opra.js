@@ -40,10 +40,11 @@ function optimalPageReplacementAlgorithm(stringDeReferencia, tamanhoDaSequencia,
 
   // Itera sobre os elementos da sequência de referencia e contabiliza os HIT's e os Misses do algoritmo.
   let hit = 0;
-  for (let i = 0; i < tamanhoDaSequencia; i++) {
-
+  for (let i = 0; i < tamanhoDaSequencia + 1; i++) {
+    console.log(`Os valores armazenados na memória na iteração: n° ${i} é - ${memoriaPrincipal}`);
       // Página encontrada na memória: HIT
-      if (buscaPaginaNaMemoriaPricipal(stringDeReferencia[i], memoriaPrincipal)) {
+      if(i<tamanhoDaSequencia){
+        if (buscaPaginaNaMemoriaPricipal(stringDeReferencia[i], memoriaPrincipal)) {
           hit++;
           continue;
       }
@@ -60,6 +61,8 @@ function optimalPageReplacementAlgorithm(stringDeReferencia, tamanhoDaSequencia,
           let j = identificaAPaginaQueNaoSeraUsadaRecentemente(stringDeReferencia, memoriaPrincipal, tamanhoDaSequencia, i + 1);
           memoriaPrincipal[j] = stringDeReferencia[i];
       }
+      }
+     
   }
   console.log("No. de hits = " + hit);
   console.log("No. de misses = " + (tamanhoDaSequencia - hit));
