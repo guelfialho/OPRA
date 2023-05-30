@@ -64,13 +64,18 @@ function optimalPageReplacementAlgorithm(stringDeReferencia, tamanhoDaSequencia,
       }
      
   }
-  console.log("No. de hits = " + hit);
+  // console.log("No. de hits = " + hit);
   console.log("No. de misses = " + (tamanhoDaSequencia - hit));
 }
 
+let capacidadeDaMemoria = 3;
+
+
 let referenciaDePaginas = [7,0,1,2,0,3,0,4,2,3,0,0,2,1,2,0,1,7];
+let tamanhoDaReferenciaDePaginas = referenciaDePaginas.length;
 
-  let tamanhoDaReferenciaDePaginas = referenciaDePaginas.length;
-  let capacidadeDaMemoria = 3;
+optimalPageReplacementAlgorithm(referenciaDePaginas, tamanhoDaReferenciaDePaginas, capacidadeDaMemoria);
 
-  optimalPageReplacementAlgorithm(referenciaDePaginas, tamanhoDaReferenciaDePaginas, capacidadeDaMemoria);
+// let referenciaDePaginas2 = [4,6,7,8,5,6,7];
+// let tamanhoDaReferenciaDePaginas2 = referenciaDePaginas2.length;
+// optimalPageReplacementAlgorithm(referenciaDePaginas2, tamanhoDaReferenciaDePaginas2, capacidadeDaMemoria);
