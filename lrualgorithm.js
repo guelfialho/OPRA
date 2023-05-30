@@ -80,9 +80,15 @@ function pageFaults(pages,n,capacity)
 }
 
 // Driver method
-let pages=[7,0,1,2,0,3,0,4,2,3,0,0,2,1,2,0,1,7];
 let capacity = 3;
+
+
+let pages=[7,0,1,2,0,3,0,4,2,3,0,0,2,1,2,0,1,7];
 console.log(pageFaults(pages, pages.length, capacity));
+
+
+// let pages2=[4,6,7,8,5,6,7];
+// console.log(pageFaults(pages2, pages2.length, capacity));
 
 
 // This code is contributed by rag2127
